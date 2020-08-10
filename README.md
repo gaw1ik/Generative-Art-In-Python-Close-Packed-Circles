@@ -24,10 +24,10 @@ Where:
 
 *nCircles = # of circles currently placed in the frame*
 
-When the cirlces are not overlapping, nRegions should be equal to nCircles, because each region *is* a circle, but once there is an overlap, nRegions will be less than nCircles, because at that point, multiple circles are contributing to the same region.
+When the circles are not overlapping, nRegions should be equal to nCircles, because each region *is* a circle, but once there is an overlap, nRegions will be less than nCircles, because at that point, multiple circles are contributing to the same region.
 
 ### The Stop Condition:
-The number of failed attempts to create a new circle are tallied during each iteration. Failed attempts happen when the initial placement of a circle overlaps with existing circles. When the number of failed attempts exceed a certain number (I have used anywhere from 150 to 1000 for these examples) the program is ended. This is a fairly non-robust stop condition, but it gets the job done just fine (at least for this range of Input parameters).
+The number of failed attempts to create a new circle are tallied during each iteration. Failed attempts happen when the initial placement of a circle overlaps with existing circles. When the number of failed attempts exceeds a certain number (I have used anywhere from 150 to 1000 for these examples) the program is ended. This is a fairly non-robust stop condition, but it gets the job done just fine (at least for this range of Input parameters).
 
 # Brief Closing Thoughts
 This certainly isn't the most robust approach to this problem, and yet, I like the artistic nature of this solution. Something about it feels very organic, almost as if the algorithm is really *trying* to make itself work. The random selection and trial and error of the process makes for a great visual as well.
