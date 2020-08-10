@@ -1,4 +1,4 @@
-# Method for creating image with non overlapping circles (using Python)
+# Method for Creating Images Containing Non-Overlapping Circles (Using Python)
 
 <p style="text-align:center">
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test1.gif" width="32%"/>
@@ -8,7 +8,7 @@
 
 Along my journey writing programs for generative art, I realized I wanted to be able to generate circles - potentially hundreds of them at random - which would not overlap with each other. This seems like a trivial problem at first, but like most programming problems that initially seem trivial, this was actually kind of a tricky problem to solve. My solution is documented here.
 
-The GIF above provides a visual for how the algorithm works. First, an initial circle is placed at random with radius equal to the largest desirable radius (specified in the Inputs section). Then one-by-one, additional circles are placed at random *in the remaining available space* in the frame (areas not yet covered by a circle). These circles are initially given the smallest desirable radius (also specified in the Inputs), and then their radius is increased gradually, until they "bump" into any existing circles, at which point the image created in the previous iteration is recorded and the process is repeated until the stopping condition is met.
+The GIFs above provides a visual for how the algorithm works. First, an initial circle is placed at random with radius equal to the largest desirable radius (specified in the Inputs section). Then one-by-one, additional circles are placed at random *in the remaining available space* in the frame (areas not yet covered by a circle). These circles are initially given the smallest desirable radius (also specified in the Inputs), and then their radius is increased gradually, until they "bump" into any existing circles, at which point the image created in the previous iteration is recorded and the process is repeated until the stopping condition is met.
 
 ## Bump Condition
 The "bump" condition is defined as when (nRegions < nCircles). 
