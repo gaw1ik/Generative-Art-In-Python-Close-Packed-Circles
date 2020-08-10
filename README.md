@@ -12,18 +12,20 @@ Along my journey writing programs for generative art, I realized I wanted to be 
 # Description of Algorithm
 The GIFs above provides a visual for how the algorithm works. First, an initial circle is placed at random with radius equal to the desired initial radius (specified in the Inputs section). Then one-by-one, additional circles are placed at random *in the remaining available space* in the frame (areas not yet covered by a circle). These circles are initially given the smallest desirable radius (also specified in the Inputs), and then their radius is increased gradually, until they *"bump"* into any existing circles, at which point the image created in the previous iteration is recorded and the process is repeated until the *stop condition* is met.
 
-## Bump Condition
+The two conditions are defined as follows:
+
+#### "Bump" Condition
 The "bump" condition is defined as when (nRegions < nCircles). 
 
-*Where:
+Where:
 
-nRegions = # of image segments
+*nRegions = # of image segments*
 
-nCircles = # of circles currently placed in the frame*
+*nCircles = # of circles currently placed in the frame*
 
-When the cirlces are not overlapping, nRegions should be equal to nCircles, but once there is an overlap nRegions will be less than nCircles, because at that point, multiple circles are contributing to one region.
+When the cirlces are not overlapping, nRegions should be equal to nCircles, because each region *is* a circle, but once there is an overlap, nRegions will be less than nCircles, because at that point, multiple circles are contributing to the same region.
 
-## Stop Condition
+#### Stop Condition
 The number of failed attempts to create a new circle are tallied during each iteration. Failed attempts happen when the initial placement of a circle overlaps with existing circles. When the number of failed attempts exceed a certain number (I have used anywhere from 150 to 1000 for these examples) the program is ended. This is a fairly non-robust stop condition, but it gets the job done just fine (at least for this range of Input parameters).
 
 # Brief Closing Thoughts
