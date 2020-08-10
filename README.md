@@ -19,7 +19,7 @@ The "bump" condition is defined as when (nRegions < nCircles).
 
 Where:
 
-*nRegions = # of image segments*
+*nRegions = # of image regions (AKA segments)*
 
 *nCircles = # of circles currently placed in the frame*
 
