@@ -14,7 +14,7 @@ The GIFs above provides a visual for how the algorithm works. First, an initial 
 
 The two conditions are defined as follows:
 
-### "Bump" Condition
+### The "Bump" Condition:
 The "bump" condition is defined as when (nRegions < nCircles). 
 
 Where:
@@ -25,7 +25,7 @@ Where:
 
 When the cirlces are not overlapping, nRegions should be equal to nCircles, because each region *is* a circle, but once there is an overlap, nRegions will be less than nCircles, because at that point, multiple circles are contributing to the same region.
 
-### Stop Condition
+### The Stop Condition:
 The number of failed attempts to create a new circle are tallied during each iteration. Failed attempts happen when the initial placement of a circle overlaps with existing circles. When the number of failed attempts exceed a certain number (I have used anywhere from 150 to 1000 for these examples) the program is ended. This is a fairly non-robust stop condition, but it gets the job done just fine (at least for this range of Input parameters).
 
 # Brief Closing Thoughts
