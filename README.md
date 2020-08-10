@@ -14,7 +14,9 @@ The GIFs above provides a visual for how the algorithm works. First, an initial 
 The "bump" condition is defined as when (nRegions < nCircles). 
 
 *Where:
+
 nRegions = # of image segments
+
 nCircles = # of circles currently placed in the frame*
 
 When the cirlces are not overlapping, nRegions should be equal to nCircles, but once there is an overlap nRegions will be less than nCircles, because at that point, multiple circles are contributing to one region.
