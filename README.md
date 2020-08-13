@@ -24,14 +24,19 @@ The "bump" condition is defined as when (nRegions < nCircles).
 
 Where:
 
-*nRegions = # of image regions (AKA segments)*
+*nRegions = # of image regions (AKA segments) as calculated using skimage.measure.regionprops*
 
-*nCircles = # of circles currently placed in the frame*
+*nCircles = # of circles currently placed in the frame which are tallied as the code iterates*
 
 When the circles are not overlapping, nRegions should be equal to nCircles, because each region *is* a circle, but once there is an overlap, nRegions will be less than nCircles, because at that point, multiple circles are contributing to the same region.
 
 ### The Stop Condition:
 The number of failed attempts to create a new circle are tallied during each iteration. Failed attempts happen when the initial placement of a circle overlaps with existing circles. When the number of failed attempts exceeds a certain number (I have used anywhere from 150 to 1000 for these examples) the program is ended. This is a fairly non-robust stop condition, but it gets the job done just fine (at least for this range of Input parameters).
+
+# Points of Discussion
+1. The code provided in this repository generates a GIF, like the ones shown above. The still frame containing the packed circles, which was the original goal of the project, can be extracted by saving the final frame as a png or jpg with a bit of finagling. Sorry, I haven't really taken the time to polish the code in this way. I might at some point.
+
+2. In the still images shown above, I have used the final output (a black and white image containing the packed circles) as an input to another code which uses the pycairo library to draw circles of different colors. Pycairo is a graphics library for python which enables convenient illustration tools such as coloring, outlining, etc. Unlike the Skimage library, which I use for the initial mask creation, Cairo draws circles with interpolated edges. This avoids jagged edges, which are especially prevalent in smaller circles when using Skimage, and the smallest circles literally just become squares :( I digress... The location and size of the circles are dictated by the output mask based on the centroid and radius (sqrt(area/pi)) of the mask's regions (calculated using *skimage.measure.regionprops*). Also, in the generation of the packed circles mask, a separate mask containing one large center circle is used to constrain the drawing area, resulting in the packed circles forming a larger circle of their own... Cool! 
 
 # Brief Closing Thoughts
 This certainly isn't the most robust approach to this problem, and yet, I like the artistic nature of this solution. Something about it feels very organic, almost as if the algorithm is really *trying* to make itself work. The random selection and trial and error of the process makes for a great visual as well.
