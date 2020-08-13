@@ -5,11 +5,11 @@ I've been creating a lot of generative art lately (mainly using Python), and lat
 
 <p style="text-align:center">
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test1.gif" width="32%"/>
-   <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/Art4Render3.png" width="32%"/>
+   <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test2.png" width="32%"/>
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test2.gif" width="32%"/> 
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test3.png" width="32%"/> 
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test3.gif" width="32%"/> 
-   <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test2.png" width="32%"/> 
+   <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test4.png" width="32%"/> 
 </p>
 
 # Description of Algorithm
