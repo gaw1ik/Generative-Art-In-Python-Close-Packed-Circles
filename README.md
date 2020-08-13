@@ -15,7 +15,7 @@ I've been creating a lot of generative art lately (mainly using Python), and lat
 </p>
 
 # Description of Algorithm
-The GIFs above provide a visual for how the algorithm works. First, an initial circle is placed at random with radius equal to the desired initial radius (specified in the Inputs section). Then one-by-one, additional circles are placed at random *in the remaining available space* in the frame (areas not yet covered by a circle). These circles are initially given the smallest desirable radius (also specified in the Inputs), and then their radius is increased gradually, until they "bump" into any existing circles (the **bump condition**), at which point the image created in the previous iteration is recorded and the process is repeated until the **stop condition** is met.
+The GIFs above provide a visual for how the algorithm works. First, an initial circle is placed at random with radius equal to the desired initial radius (specified in the Inputs section). Then one-by-one, additional circles are placed at random *in the remaining available space* in the frame (areas not yet covered by a circle). An image mask can be used here to dictate the available space, confining the circles to arbitrary regions (as is done in the static png examples above). These circles are initially given the smallest desirable radius (also specified in the Inputs), and then their radius is increased gradually, until they "bump" into any existing circles (the **bump condition**), at which point the image created in the previous iteration is recorded and the process is repeated until the **stop condition** is met.
 
 The two conditions are defined as follows:
 
