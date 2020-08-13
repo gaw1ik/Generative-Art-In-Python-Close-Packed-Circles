@@ -3,7 +3,7 @@
 Check it out... It works!
 <p style="text-align:center">
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test1.gif" width="32%"/>
-   <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test5.png" width="32%"/>
+   <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/Art4Render3.png" width="32%"/>
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test2.gif" width="32%"/> 
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test3.png" width="32%"/> 
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test3.gif" width="32%"/> 
