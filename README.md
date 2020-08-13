@@ -1,6 +1,8 @@
 # Method for Creating Images Containing Non-Overlapping Circles (Using Python)
 
-Check it out... It works!
+# Background
+I've been creating a lot of generative art lately (mainly using Python), and lately I've wanted to be able to generate circles - potentially hundreds of them at random - which would *not overlap* with each other. This seems like a trivial problem at first, but like most programming problems that initially seem trivial, this was actually kind of a tricky problem to solve. My solution is documented here.
+
 <p style="text-align:center">
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test1.gif" width="32%"/>
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/Art4Render3.png" width="32%"/>
@@ -9,9 +11,6 @@ Check it out... It works!
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test3.gif" width="32%"/> 
    <img src="https://github.com/gaw1ik/Method-for-creating-image-with-non-overlapping-circles/blob/master/test2.png" width="32%"/> 
 </p>
-
-# Background
-I've been creating a lot of generative art lately (mainly using Python), and lately I've wanted to be able to generate circles - potentially hundreds of them at random - which would *not overlap* with each other. This seems like a trivial problem at first, but like most programming problems that initially seem trivial, this was actually kind of a tricky problem to solve. My solution is documented here.
 
 # Description of Algorithm
 The GIFs above provide a visual for how the algorithm works. First, an initial circle is placed at random with radius equal to the desired initial radius (specified in the Inputs section). Then one-by-one, additional circles are placed at random *in the remaining available space* in the frame (areas not yet covered by a circle). These circles are initially given the smallest desirable radius (also specified in the Inputs), and then their radius is increased gradually, until they "bump" into any existing circles (the **bump condition**), at which point the image created in the previous iteration is recorded and the process is repeated until the **stop condition** is met.
