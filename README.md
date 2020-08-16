@@ -1,4 +1,4 @@
-# Method for Creating Images Containing Non-Overlapping Circles (Using Python)
+# Generative Art In Python: Close Packed Circles
 
 I've been creating a lot of "generative art" recently (mainly using Python), and lately I've wanted to be able to generate circles - potentially hundreds of them at random - which would *not overlap* with each other. This seems like a trivial problem at first, but like most programming problems that initially seem trivial, this was actually kind of a tricky problem to solve. My solution is documented here.
 
